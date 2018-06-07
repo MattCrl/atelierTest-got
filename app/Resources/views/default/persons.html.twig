@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des personnes</h1>
+
+    <div class="row">
+        <table class="table table-stripped">
+            <thead>
+            <tr>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">Biography</th>
+                <th scope="col">Lien</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for person in persons %}
+                <tr>
+                    <td>{{ person.firstname }}</td>
+                    <td>{{ person.name|upper }}</td>
+                    <td>{{ person.biography }}</td>
+                    <td><a href="{{ path('person', { 'id': person.id }) }}" class="btn btn-primary">Voir page personne</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+    <a href="{{ path('homepage') }}" class="btn btn-primary">Back to homepage</a>
+    <a href="{{ path('add') }}" class="btn btn-primary">Ajouter une personne</a>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+   <h1>Game of thrones atelier</h1>
+
+    <ul>
+       <li><a href="{{ path('persons') }}">Voir la liste des personnes</a></li>
+       <li><a href="{{ path('add') }}">Ajouter une personne</a></li>
+    </ul>
+{% endblock %}

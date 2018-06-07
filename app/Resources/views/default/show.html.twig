@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Firstname</h2>
+    <p>{{ person.name }}</p>
+    <h2>Lastname</h2>
+    <p>{{ person.firstname }}</p>
+    <h2>Kingdom</h2>
+    <p>{{ person.kingdom.name }}</p>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+
+<button type="submit" class="btn btn-primary">Add</button>
+    <a href="{{ path('homepage') }}" class="btn btn-primary">Back to homepage</a>
+
+    {{ form_end(form) }}
+
+{% endblock %}
